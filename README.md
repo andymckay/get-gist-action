@@ -1,4 +1,4 @@
-This Action gets a Gist off of GitHub and writes it out to a file. It requires that the gist only contains one and only one file. It authenticates with a PAT to get private Gists.
+This Action gets a Gist off of GitHub and writes it out to a file. It requires that the gist only contains one and only one file.
 
 ### Inputs:
 * `gistURL`: The URL to the Gist.
