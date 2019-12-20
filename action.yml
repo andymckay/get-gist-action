@@ -2,3 +2,5 @@ name: 'Get Gist'
 inputs:
   gistURL: 'URL to the gist'
   required: true
+using: 'node12'
+main: 'gist.js'
