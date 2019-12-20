@@ -9,5 +9,6 @@ inputs:
 outputs:
   file:
     description: 'The filename containing the Gist'
-using: 'node12'
-main: 'gist.js'
+runs:
+  using: 'node12'
+  main: 'gist.js'
