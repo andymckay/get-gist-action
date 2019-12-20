@@ -5,7 +5,6 @@ inputs:
     required: true
   token:
     description: 'Token able to grab gists'
-    required: true
 outputs:
   file:
     description: 'The filename containing the Gist'
