@@ -3,6 +3,7 @@ let token = process.env.TOKEN;
 let fs = require('fs');
 let https = require('https');
 
+console.log(process.env);
 console.log('Gist URL:', gistURL);
 let gistID = gistURL.split('/')[4]
 console.log('Gist ID is:', gistID);
