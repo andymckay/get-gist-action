@@ -12,4 +12,4 @@ runs:
 branding:
   icon: 'align-center'
   color: 'orange'
-  description: 'Downloads the contents of a gist into a file.'
+description: 'Downloads the contents of a gist into a file.'
