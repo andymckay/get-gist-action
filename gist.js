@@ -18,7 +18,7 @@ let options = {
 
 https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
   let data = '';
-  console.log(`GitHub response HTTP status: ${resp.status_code}`);
+  console.log(`GitHub response HTTP status: ${resp.statusCode}`);
     
   // A chunk of data has been recieved.
   resp.on('data', (chunk) => {
