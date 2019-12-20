@@ -6,5 +6,8 @@ inputs:
   token:
     description: 'Token able to grab gists'
     required: true
+outputs:
+  file:
+    description: 'The filename containing the Gist'
 using: 'node12'
 main: 'gist.js'
