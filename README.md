@@ -22,7 +22,6 @@ jobs:
       id: get
       uses: andymckay/get-gist-action@master
       with:
-        token: ${{secrets.PAT}}
         gistURL: "https://gist.github.com/andymckay/c290f9c904502e98da98e59124610b93" 
     - name: Show Gist contents
       id: run
