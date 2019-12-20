@@ -43,7 +43,7 @@ https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
     function(err) {
         if (err) throw err;
         console.log(`Gist is written to /tmp/${file['filename']} successfully.`);
-        return file['filename'];
+        process.stdout.write(`::set-output name=file::/tmp/${file['filename']`);
     });
   });
 
