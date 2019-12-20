@@ -3,8 +3,6 @@ inputs:
   gistURL: 
     description: 'URL to the gist'
     required: true
-  token:
-    description: 'Token able to grab gists'
 outputs:
   file:
     description: 'The filename containing the Gist'
