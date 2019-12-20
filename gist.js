@@ -28,9 +28,7 @@ https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
   // The whole response has been received. Print out the result.
   resp.on('end', () => {
     console.log('Gotten gist successfully from GitHub.')
-    console.log(data);
     let parsed = JSON.parse(data);
-    console.log(parsed);
     if (!parsed.files) {
         console.log("Error: not a successful response.");
         return;
