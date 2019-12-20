@@ -1,5 +1,4 @@
 let gistURL = process.env.INPUT_GISTURL;
-let token = process.env.INPUT_TOKEN;
 let fs = require('fs');
 let https = require('https');
 
@@ -13,10 +12,6 @@ let options = {
         'Content-Type': 'application/json',
         'User-Agent': 'actions/get-gist-action'
     }
-}
-
-if (token) {
-    options.headers['Authorization'] = `token ${token}`;
 }
 
 https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
