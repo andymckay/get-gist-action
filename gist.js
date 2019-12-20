@@ -10,10 +10,13 @@ console.log('Gist ID is:', gistID);
 let options = {
     'headers': {
         'Accept': 'application/vnd.github.v3+json',
-        'Authorization': `token ${token}`,
         'Content-Type': 'application/json',
         'User-Agent': 'actions/get-gist-action'
     }
+}
+
+if (token) {
+    options.headers['Authorization'] = `token ${token}`;
 }
 
 https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
