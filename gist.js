@@ -32,9 +32,13 @@ https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
     console.log(data);
     let parsed = JSON.parse(data);
     console.log(parsed);
+    if (!parsed.files) {
+        console.log("Error: not a successful response.");
+        return;
+    }
     let files = Object.values(parsed.files);
     if (files.length != 1) {
-        console.log("Error: looking for one and only one file.")
+        console.log("Error: looking for one and only one file.");
         return;
     }
     let file = files[0];
