@@ -1,9 +1,8 @@
 let gistURL = process.env.INPUT_GISTURL;
-let token = process.env.TOKEN;
+let token = process.env.INPUT_TOKEN;
 let fs = require('fs');
 let https = require('https');
 
-console.log(process.env.INPUT_GISTURL.split('ded'));
 console.log('Gist URL:', gistURL);
 let gistID = gistURL.split('/')[4]
 console.log('Gist ID is:', gistID);
