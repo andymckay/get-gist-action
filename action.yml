@@ -1,6 +1,10 @@
 name: 'Get Gist'
 inputs:
-  gistURL: 'URL to the gist'
-  required: true
+  gistURL: 
+    description: 'URL to the gist'
+    required: true
+  token:
+    description: 'Token able to grab gists'
+    required: true
 using: 'node12'
 main: 'gist.js'
