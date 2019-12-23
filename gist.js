@@ -15,15 +15,16 @@ let options = {
 }
 
 https.get(`https://api.github.com/gists/${gistID}`, options, (resp) => {
+  if (resp.statusCode !== 200) {
+    console.log(`Got an error: ${resp.statusCode}`);
+    process.exit(1)
+  }
+
   let data = '';
-  console.log(`GitHub response HTTP status: ${resp.statusCode}`);
-    
-  // A chunk of data has been recieved.
   resp.on('data', (chunk) => {
     data += chunk;
   });
 
-  // The whole response has been received. Print out the result.
   resp.on('end', () => {
     console.log('Gotten gist successfully from GitHub.')
     let parsed = JSON.parse(data);
